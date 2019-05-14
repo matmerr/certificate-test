@@ -17,6 +17,7 @@ namespace CertificateTest
         {
             var serviceHostConfig = new HttpSelfHostConfiguration("https://127.0.0.1:34343");
 
+            //serviceHostConfig.ClientCredentialType = HttpClientCredentialType.Certificate;
             serviceHostConfig.ClientCredentialType = HttpClientCredentialType.None;
 
             serviceHostConfig.MessageHandlers.Add(new TestAuthorizationMetadataHandler());
